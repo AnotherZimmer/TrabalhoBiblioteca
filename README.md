@@ -7,6 +7,6 @@
 * O site deve permitir que usuarios pesquisem os livros por Nome, Autor, Categoria e etc.
 ### 3.**Reserva de Livros:**
 * O site deve permitir que os usuarios reservem os livros online.
-### 4.**Historico de emprestimo**
-* O site deve conter
+### 4.**Historico de empréstimo**
+* O site deve exibir 
 ## Requisitos Não Funcionais
