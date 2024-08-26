@@ -1,0 +1,365 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/50yP9XB4sPH
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Textarea } from "@/components/ui/textarea"
+
+export default function Component() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <div className="flex items-center justify-center flex-1 bg-gradient-to-r from-primary to-primary-foreground">
+        <div className="bg-background p-8 rounded-lg shadow-lg w-full max-w-md">
+          <h1 className="text-3xl font-bold mb-6 text-center">Welcome to the School Library</h1>
+          <form className="space-y-4">
+            <div>
+              <Label htmlFor="username">Username</Label>
+              <Input id="username" type="text" placeholder="Enter your username" required />
+            </div>
+            <div>
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" type="password" placeholder="Enter your password" required />
+            </div>
+            <Button type="submit" className="w-full">
+              Login
+            </Button>
+          </form>
+        </div>
+      </div>
+      <header className="bg-background shadow-md">
+        <div className="container mx-auto py-4 px-6">
+          <div className="flex items-center">
+            <Link href="#" className="mr-6" prefetch={false}>
+              <BookIcon className="w-6 h-6 text-primary" />
+            </Link>
+            <div className="relative flex-1">
+              <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Search books..."
+                className="w-full pl-10 pr-4 py-2 rounded-lg bg-muted text-foreground"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main className="container mx-auto py-8 px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <img
+              src="/placeholder.svg"
+              alt="Book Cover"
+              width={400}
+              height={600}
+              className="w-full h-auto rounded-lg object-cover"
+              style={{ aspectRatio: "400/600", objectFit: "cover" }}
+            />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold mb-2">The Great Gatsby</h1>
+            <p className="text-muted-foreground mb-4">by F. Scott Fitzgerald</p>
+            <p className="mb-6">
+              The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long
+              Island, near New York City, the novel depicts narrator Nick Carraway's interactions with mysterious
+              millionaire Jay Gatsby and Gatsby's obsession with his former love, Daisy Buchanan.
+            </p>
+            <div className="flex items-center mb-6">
+              <StarIcon className="w-5 h-5 text-yellow-500 mr-1" />
+              <span className="text-2xl font-bold">4.5</span>
+              <span className="text-muted-foreground ml-2">(1,234 reviews)</span>
+            </div>
+            <Button className="w-full md:w-auto">Borrow Book</Button>
+          </div>
+        </div>
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Comments</h2>
+          <div className="space-y-4">
+            <div className="flex items-start">
+              <Avatar className="w-10 h-10 mr-4">
+                <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <div className="flex-1">
+                <div className="flex items-center mb-2">
+                  <span className="font-bold mr-2">John Doe</span>
+                  <span className="text-muted-foreground text-sm">2 days ago</span>
+                </div>
+                <p>
+                  This book is a true masterpiece! The writing is captivating and the characters are so well-developed.
+                  I couldn't put it down.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <Avatar className="w-10 h-10 mr-4">
+                <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
+                <AvatarFallback>SA</AvatarFallback>
+              </Avatar>
+              <div className="flex-1">
+                <div className="flex items-center mb-2">
+                  <span className="font-bold mr-2">Sarah Anderson</span>
+                  <span className="text-muted-foreground text-sm">1 week ago</span>
+                </div>
+                <p>
+                  I really enjoyed this book. The themes and symbolism were fascinating, and the writing was simply
+                  beautiful. Highly recommended!
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <Avatar className="w-10 h-10 mr-4">
+                <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
+                <AvatarFallback>MJ</AvatarFallback>
+              </Avatar>
+              <div className="flex-1">
+                <div className="flex items-center mb-2">
+                  <span className="font-bold mr-2">Michael Johnson</span>
+                  <span className="text-muted-foreground text-sm">3 weeks ago</span>
+                </div>
+                <p>
+                  I had to read this book for my English class, and I'm so glad I did. The story is captivating, and the
+                  characters really stuck with me. Definitely a must-read!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6">
+            <Textarea placeholder="Write your comment..." className="w-full rounded-lg bg-muted text-foreground p-4" />
+            <Button className="mt-4">Submit Comment</Button>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
+
+function BookIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+    </svg>
+  )
+}
+
+
+function StarIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 339 20% 20%;
+    --primary: 308 56% 85%;
+    --primary-foreground: 210 22% 22%;
+    --secondary: 196 75% 88%;
+    --secondary-foreground: 210 22% 22%;
+    --accent: 211 86% 70%;
+    --accent-foreground: 210 22% 22%;
+    --destructive: 0 93% 73%;
+    --destructive-foreground: 210 22% 22%;
+    --muted: 210 100% 95%;
+    --muted-foreground: 210 22% 22%;
+    --card: 210 100% 97%;
+    --card-foreground: 210 22% 22%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 341 20% 22%;
+    --border: 210 40% 80%;
+    --input: 210 40% 56%;
+    --ring: 210 40% 60%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// This is the root layout component for your Next.js app.
+// Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
+import { Manrope } from 'next/font/google'
+import { cn } from '@/lib/utils'
+import './globals.css'
+
+const fontHeading = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-heading',
+})
+
+const fontBody = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
+})
+
+export default function Layout({ children }) {
+  return (
+    <html lang="en">
+      <body 
+        className={cn(
+          'antialiased',
+          fontHeading.variable,
+          fontBody.variable
+        )}
+      >
+        {children}
+      </body>
+    </html>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+import { fontFamily } from "tailwindcss/defaultTheme";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['var(--font-heading)', ...fontFamily.sans],
+        body: ['var(--font-body)', ...fontFamily.sans]
+      },
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))'
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))'
+        },
+      },
+      borderRadius: {
+        xl: `calc(var(--radius) + 4px)`,
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
+        sm: `calc(var(--radius) - 4px)`
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" }
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 }
+        }
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out"
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+};
