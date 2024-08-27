@@ -1,34 +1,53 @@
 # TrabalhoBiblioteca
 ### [Definição dos problemas](https://github.com/user-attachments/files/16604520/TRABALHO.INFORMATICA-2.pdf "Trabalho_Info.pdf")
-# Overview
-
 <table>
   <tr>
     <th>Tipo de Requisito</th>
+    <th>ID</th>
     <th>Descrição</th>
+    <th>Entrada</th>
+    <th>Saida</th>
+    <th>Pré-Requisitos</th>
   </tr>
   <tr>
     <td rowspan="5">Funcionais</td>
+    <td>1</td>
     <td>Cadastro de Usuários</td>
+    <td>E-mail,Nome De Usuario,Senha</td>
+    <td>Usuario cadastrado</td>
+    <td>estar conectado a internet</td>
   </tr>
   <tr>
+    <td>2</td>
     <td>Pesquisa de Livros</td>
+    <td>Nome, Autor, Ano De Lançamento, etc.</td>
+    <td>se o livro exitir: informações do livro</td>
+    <td>estar cadastrado</td>
   </tr>
   <tr>
+    <td>3</td>
     <td>Reserva de Livros</td>
   </tr>
   <tr>
+    <td>4</td>
     <td>Histórico de Empréstimo</td>
   </tr>
   <tr>
+    <td>5</td>
     <td>Notificações</td>
   </tr>
   <tr>
-    <td rowspan="2">Não Funcionais</td>
+     <td rowspan="2">Não Funcionais</td>
+    <td>6</td>
     <td>Desempenho</td>
   </tr>
   <tr>
+    <td>7</td>
     <td>Usabilidade</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Segurança</td>
   </tr>
 </table>
 
