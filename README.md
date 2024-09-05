@@ -27,10 +27,16 @@
   <tr>
     <td>3</td>
     <td>Reserva de Livros</td>
+    <td>Nome de usuario,Nome do livro</td>
+    <td>Reserva concluida ou não e porquê</td>
+    <td>Livro não deve estar preveamente reservado</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Histórico de Empréstimo</td>
+    <td>Nome de usuario, Nome do livro e datas</td>
+    <td>Esta devendo livro ou se o livro esta indisponivel</td>
+    <td>Livro não deve estar preveamente reservado</td>
   </tr>
   <tr>
     <td>5</td>
