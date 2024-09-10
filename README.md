@@ -36,8 +36,7 @@
     <td>Histórico de Empréstimo</td>
     <td>Nome de usuario, Nome do livro e datas</td>
     <td>Esta devendo livro ou se o livro esta indisponivel</td>
-    <td>Livro não deve estar preveamente reservado</td>
-  </tr>
+    <td>O livro ja foi cadastrado</tr>
   <tr>
     <td>5</td>
     <td>Notificações</td>
