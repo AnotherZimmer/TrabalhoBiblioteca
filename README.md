@@ -10,7 +10,7 @@
     <th>Pré-Requisitos</th>
   </tr>
   <tr>
-    <td rowspan="5">Funcionais</td>
+    <td rowspan="4">Funcionais</td>
     <td>1</td>
     <td>Cadastro de Usuários</td>
     <td>E-mail,Nome De Usuario,Senha</td>
@@ -36,23 +36,31 @@
     <td>Histórico de Empréstimo</td>
     <td>Nome de usuario, Nome do livro e datas</td>
     <td>Esta devendo livro ou se o livro esta indisponivel</td>
-    <td>O livro ja foi cadastrado</tr>
+    <td>O livro ja foi cadastrado </td>
+  </tr>
+</table>
+<table>
   <tr>
-    <td>5</td>
-    <td>Notificações</td>
+    <th>Tipo de Requisito</th>
+    <th>ID</th>
+    <th>Descrição</th>
+    <th>Detalhado</th>
   </tr>
   <tr>
-     <td rowspan="2">Não Funcionais</td>
+     <td rowspan="3">Não Funcionais</td>
     <td>6</td>
     <td>Desempenho</td>
+    <td colspan="3">O site deve ser limpo e agil tanto para reduzir a carga no seidor como para melhorar a esperiencia de usuario.</td>
   </tr>
   <tr>
     <td>7</td>
     <td>Usabilidade</td>
+    <td colspan="3">O site deve ser intuitivo e facil de navegar, com uma interface amigavel para usuarios de todas as idades.</td>
   </tr>
   <tr>
     <td>8</td>
     <td>Segurança</td>
+    <td colspan="3">O site deve ser seguro mantendo a integridade da pagina e a privacidade dos usuarios.</td>
   </tr>
 </table>
 
@@ -71,8 +79,10 @@
 * O site deve enviar notificações e-mails quando um livro reservado estiver disponivel ou quando a data de devolução estiver proxima.
 ## **Requisitos Não Funcionais**
 ### 1.**Desempenho**
-* O site deve criptografar todas as informações sensives como senhas e dados pessoais dos usuarios.
+* O site deve ser limpo e agil tanto para reduzir a carga no seidor como para melhorar a esperiencia de usuario.
 ### 2.**Usabilidade**
 * O site deve ser intuitivo e facil de navegar, com uma interface amigavel para usuarios de todas as idades.
+### 3.**Segurança**
+* O site deve ser seguro mantendo a integridade da pagina e a privacidade dos usuarios.
 
 
